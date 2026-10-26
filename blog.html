@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Landscape Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#a9d83a;
+  --lime-deep:#6fa31d;
+  --sky:#8fd6f2;
+  --sky-pale:#e6f6fc;
+  --white:#ffffff;
+  --ink:#27421a;
+  --ink-soft:#4f6b3f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  color:var(--ink);background:var(--sky-pale);line-height:1.9;
+}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(6px);
+  border-bottom:3px solid var(--lime);
+}
+.bar{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.2rem;text-decoration:none;letter-spacing:.04em}
+.logo span{color:var(--lime-deep)}
+nav ul{list-style:none;display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:6px 16px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;transition:background .2s}
+nav a:hover{background:var(--sky-pale)}
+nav a[aria-current="page"]{background:var(--lime)}
+
+.title{
+  background:linear-gradient(180deg,var(--sky) 0%,var(--sky-pale) 100%);
+  padding:48px 20px 40px;text-align:center;
+}
+.title h1{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;letter-spacing:.05em}
+.title p{margin-top:8px}
+
+/* timeline */
+main{max-width:640px;margin:0 auto;padding:8px 16px 64px}
+.feed{list-style:none;background:var(--white);border:3px solid var(--lime);border-radius:24px;overflow:hidden}
+.post{padding:20px 24px;border-bottom:2px solid var(--sky-pale)}
+.post:last-child{border-bottom:none}
+.post time{display:block;font-size:.85rem;font-weight:700;color:var(--lime-deep)}
+.post p{margin-top:6px;white-space:pre-line}
+
+footer{background:var(--lime);padding:28px 20px;text-align:center;font-size:.9rem}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="index.html">Landscape <span>Notes</span></a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <h1>Blog</h1>
+  <p>勉強の進捗メモ</p>
+</div>
+
+<main>
+  <ol class="feed">
+    <li class="post">
+      <time datetime="2026-10-26">2026.10.26</time>
+      <p>庭の動線について勉強。人が歩く道は、まっすぐより少し曲げたほうが先の景色に期待が持てる。</p>
+    </li>
+    <li class="post">
+      <time datetime="2026-10-24">2026.10.24</time>
+      <p>植栽の高さの組み合わせを整理した。高木、中木、低木、地被の順に重ねると奥行きが出る。</p>
+    </li>
+    <li class="post">
+      <time datetime="2026-10-21">2026.10.21</time>
+      <p>公園の広場の事例を調べた。ベンチの向きひとつで、人の居方が全然変わるのが面白い。</p>
+    </li>
+    <li class="post">
+      <time datetime="2026-10-18">2026.10.18</time>
+      <p>平面図の描き方を練習。樹木の記号をきれいに揃えるだけで、図面が見やすくなった。</p>
+    </li>
+  </ol>
+</main>
+
+<footer>&copy; Landscape Notes</footer>
+
+</body>
+</html>
